@@ -1,5 +1,13 @@
 window.addEventListener('load', function() {
 	//stran nalozena
+	document.querySelector("#prijavniGumb").addEventListener('click', vnesiIme); 
+
+	function vnesiIme(){
+		var prekrij = document.querySelector(".pokrivalo");
+		prekrij.style.display="none";
+		var ime = document.querySelector("#uporabnisko_ime").value;
+		document.querySelector("#uporabnik").innerHTML=ime;
+	}
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
