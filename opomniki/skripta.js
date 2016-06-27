@@ -8,6 +8,16 @@ window.addEventListener('load', function() {
 		var ime = document.querySelector("#uporabnisko_ime").value;
 		document.querySelector("#uporabnik").innerHTML=ime;
 	}
+	
+	document.querySelector("#dodajGumb").addEventListener('click', dodajOpomnik); 
+	function dodajOpomnik(){
+		var naziv = document.querySelector("#naziv_opomnika").value;
+		var cas = document.querySelector("#cas_opomnika").value;
+		document.querySelector("#naziv_opomnika").value = "";
+		document.querySelector("#cas_opomnika").value = "";
+		
+		document.querySelector("#opomniki").innerHTML = "<div class='opomnik'> <div class='naziv_opomnika'>" +naziv+ "</div> <div class='cas_opomnika'> Opomnik čez <span> "+cas+"</span> sekund. </div> </div>";
+	}
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
